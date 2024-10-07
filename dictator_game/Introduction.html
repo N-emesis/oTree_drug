@@ -1,0 +1,7 @@
+{{ block title }}实验一介绍{{ endblock }}
+{{ block content }}
+<p><strong></strong>注意：每个部分实验均为独立进行，前后并无关联。</strong></p>
+    {{ include_sibling 'instructions.html' }}
+    <p>点击下面的按钮继续：</p>
+    {{ next_button }}
+{{ endblock }}

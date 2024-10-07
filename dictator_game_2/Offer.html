@@ -1,0 +1,15 @@
+{{ block title }} 请做出本轮选择 {{ endblock }}
+{{ block content }}
+    <h3>
+        你本轮拥有 {{ C.ENDOWMENT }} 分。 
+        请决定你本轮想保留多少分给自己。
+        <strong>
+            <br>你的选择将会有观察者进行记录。
+        </strong>
+    </h3>
+    {{ formfields }}
+    <p>点击下面的按钮继续：</p>
+    {{ next_button }}
+    {{ include_sibling 'instructions.html' }}
+
+{{ endblock }}

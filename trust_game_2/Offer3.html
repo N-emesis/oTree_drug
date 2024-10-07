@@ -1,0 +1,17 @@
+{{ block title }} 请做出本轮选择 {{ endblock }}
+{{ block content }}
+    <h3>
+        本轮实验你是<strong>参与者2。</strong>
+        <br>本轮参与者1向你分配了<strong>9分</strong>，因此你得到了<strong> 27分</strong>（9 × 3 = 27）。 
+        <br>请决定你本轮想向参与者1回馈多少分。
+        <br><strong>注意：你回馈给参与者1的分数将不会公布给对方。</strong>
+        <strong>
+            <br>本轮实验为匿名实验，你所做出的选择是匿名的。
+        </strong>
+    </h3>
+    {{ formfields }}
+    <p>点击下面的按钮继续：</p>
+    {{ next_button }}
+    {{ include_sibling 'instructions.html' }}
+
+{{ endblock }}

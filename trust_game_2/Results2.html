@@ -1,0 +1,12 @@
+{{ block title }}结果{{ endblock }}
+
+{{ block content }}
+    <p>
+        你决定向参与者1回馈 <strong>{{ a }}分</strong> 。
+        
+        <p>点击下面的按钮继续：</p>
+        {{ next_button }}
+    </p>
+    {{ include_sibling 'instructions.html' }}
+{{ endblock }}
+

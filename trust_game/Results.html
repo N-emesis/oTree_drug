@@ -1,0 +1,11 @@
+{{ block title }}结果{{ endblock }}
+
+{{ block content }}
+    <p>
+        你决定向参与者2分配 <strong>{{ player.kept }}分</strong> 。
+        
+        <p>点击下面的按钮继续：</p>
+        {{ next_button }}
+    </p>
+    {{ include_sibling 'instructions.html' }}
+{{ endblock }}

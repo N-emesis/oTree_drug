@@ -1,0 +1,23 @@
+{{ block title }}
+    请稍等，观察者正在对本轮实验进行记录并评价。
+{{ endblock }}
+
+{{ block body }}
+
+    <script type="text/javascript">
+        // JavaScript for countdown timer
+        var timeLeft = 10;
+        var timerElement = document.getElementById('timer');
+        
+        function updateTimer() {
+            timeLeft -= 1;
+            if (timeLeft <= 0) {
+                document.querySelector('form').submit(); // 自动提交表单跳转到下一个页面
+            } else {
+                setTimeout(updateTimer, 1000);
+            }
+        }
+
+        updateTimer();
+    </script>
+{{ endblock }}
