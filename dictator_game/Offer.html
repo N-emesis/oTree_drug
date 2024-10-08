@@ -1,15 +1,37 @@
 {{ block title }} 请做出本轮选择 {{ endblock }}
-{{ block content }}
-    <h3>
-        你本轮拥有 {{ C.ENDOWMENT }} 分。 
-        请决定你本轮想保留多少分给自己。
-        <strong>
-            <br>本轮实验为匿名实验，你所做出的选择是匿名的。
-        </strong>
-    </h3>
-    {{ formfields }}
-    <p>点击下面的按钮继续：</p>
-    {{ next_button }}
-    {{ include_sibling 'instructions.html' }}
 
+{{ block content }}
+<div class="container">
+    <!-- 标题部分 -->
+    <h1 class="text-center" style="color: #007bff; font-size: 2em; margin-bottom: 20px;">请做出本轮选择</h1>
+    
+    <!-- 提示信息和玩家角色 -->
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #17a2b8; margin-bottom: 20px;">
+        <h3 style="font-size: 1.4em;">
+            <strong>你是参与者1。</strong>
+        </h3>
+        <p style="font-size: 1.2em;">
+            你本轮拥有 <strong style="color: #28a745;">{{ C.ENDOWMENT }} 分</strong>。<br>
+            请决定你本轮想分配给参与者2的分数。
+        </p>
+        <p style="font-size: 1.2em; color: #6c757d;">
+            <strong>本轮实验为匿名实验，你所做出的选择是匿名的。</strong>
+        </p>
+    </div>
+    
+    <!-- 表单部分 -->
+    <div class="form-group">
+        {{ formfields }}
+    </div>
+    
+    <!-- 按钮部分 -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+    
+    <!-- 实验说明文件包含 -->
+    <div style="margin-top: 20px;">
+        {{ include_sibling 'instructions.html' }}
+    </div>
+</div>
 {{ endblock }}

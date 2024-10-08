@@ -25,18 +25,18 @@ class Player(BasePlayer):
         label="请输入您的号码",
         doc="玩家输入的号码"
     )
-    kept = models.CurrencyField(
+    Offer = models.CurrencyField(
          min=0, 
          max=C.ENDOWMENT,
-         label="请输入你本轮想要保留的分数",
-         doc="独裁者选择保留的分数"
+         label="请输入你本轮想给参与者2分配的分数",
+         doc="独裁者分配给参与者2的分数"
     )
     def role(self):
         return 'dictator'
 
 
 def set_payoffs(group: Group):
-        Player.payoff = Player.kept
+        Player.payoff = Player.Offer
 
 #页面
 
@@ -55,7 +55,7 @@ class Introduction(Page):
 
 class Offer(Page):
     form_model = 'player'
-    form_fields = ['kept']
+    form_fields = ['Offer']
     
     # @staticmethod
     # def is_displayed(player:Player):
@@ -68,7 +68,7 @@ class Results(Page):
     @staticmethod
     def vars_for_template(player:Player):
         # group = player.group
-        return dict(Offer = C.ENDOWMENT - player.kept)
+        return dict(kept = C.ENDOWMENT - player.Offer)
 
 
 page_sequence = [ParticipantNumberInput, Introduction, Offer, ResultsWaitPage, Results]

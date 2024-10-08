@@ -4,20 +4,46 @@
 
 {{ block body }}
 
-    <script type="text/javascript">
-        // JavaScript for countdown timer
-        var timeLeft = 10;
-        var timerElement = document.getElementById('timer');
-        
-        function updateTimer() {
-            timeLeft -= 1;
-            if (timeLeft <= 0) {
-                document.querySelector('form').submit(); // 自动提交表单跳转到下一个页面
-            } else {
-                setTimeout(updateTimer, 1000);
-            }
-        }
+<div class="container text-center" style="margin-top: 100px; font-family: Arial, sans-serif; color: #333;">
+    <h3 style="font-size: 2em; margin-bottom: 20px;">请稍等...</h3>
+    <p style="font-size: 1.2em; margin-bottom: 30px;">
+        观察者正在记录行为，请等待。
+    </p>
 
-        updateTimer();
-    </script>
+    <!-- 加载动画 -->
+    <div class="spinner-border text-primary" role="status" style="margin-top: 20px;">
+        <span class="sr-only">加载中...</span>
+    </div>
+
+    <!-- 进度条显示模拟统计过程 -->
+    <div class="progress" style="height: 30px; margin-top: 20px;">
+        <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 1.2em;">
+        请稍等，数据统计中...
+    </p>
+</div>
+
+<script type="text/javascript">
+    // JavaScript for progress bar
+    var timeLeft = 10; // 可根据需要调整总时间
+    var progressBar = document.getElementById('progress-bar');
+
+    function updateProgressBar() {
+        var progressPercentage = ((10 - timeLeft) / 10) * 100;
+        progressBar.style.width = progressPercentage + "%";
+
+        // Check if time is up
+        if (timeLeft <= 0) {
+            document.querySelector('form').submit(); // 自动提交表单，跳转到下一个页面
+        } else {
+            timeLeft -= 1;
+            setTimeout(updateProgressBar, 1000); // 每秒更新一次
+        }
+    }
+
+    updateProgressBar();
+</script>
+
 {{ endblock }}

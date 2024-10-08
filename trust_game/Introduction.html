@@ -1,8 +1,18 @@
-{{ block title }}实验三介绍{{ endblock }}
 {{ block content }}
-<p><strong></strong>注意：每个部分实验均为独立进行，前后并无关联。
-<br>参与者2是否回馈给参与者1分数的信息将不会在每次实验中公布。</strong></p>
-    {{ include_sibling 'instructions.html' }}
-    <p>点击下面的按钮继续：</p>
-    {{ next_button }}
+<div class="card bg-light m-3">
+    <div class="card-body text-center">
+        <h3 class="text-primary">实验三介绍</h3>
+        
+        <p class="lead">
+            <strong>注意：</strong>每个部分实验均为独立进行，前后并无关联。
+            <br>参与者2是否回馈给参与者1分数的信息在每次实验中是保密的。
+        </p>
+        
+        {{ include_sibling 'instructions.html' }}
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        </div>
+    </div>
+</div>
 {{ endblock }}

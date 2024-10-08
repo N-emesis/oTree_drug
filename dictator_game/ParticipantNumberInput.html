@@ -1,14 +1,19 @@
-
-
 {{ block title }}
     欢迎参加一项关于决策的研究！
 {{ endblock }}
 
 {{ block content }}
-    <h3>请输入您的号码以进行实验</h3>
-    
-    <form method="post">
-        {{ formfields }}
-        <button type="submit" class="btn btn-primary">提交</button>
-    </form>
+<div class="container" style="max-width: 600px; margin: 0 auto; padding-top: 50px;">
+    <div class="card" style="padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 class="text-center" style="color: #17a2b8; font-size: 1.8em;">请输入您的号码以进行实验</h3>
+
+        <!-- 表单 -->
+        <form method="post" style="margin-top: 30px;">
+            {{ formfields }}
+            <div class="text-center" style="margin-top: 20px;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
 {{ endblock }}

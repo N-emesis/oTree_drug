@@ -1,10 +1,16 @@
 {{ block title }}感谢您的配合{{ endblock }}
 {{ block content }}
 
-    <p>
-        <br><strong>本次实验结束，感谢配合。</strong>
+<div class="container text-center mt-5">
+    <h2 class="mb-4">感谢您的配合</h2>
+    
+    <p class="lead">
+        <strong>本次实验已结束，感谢您的参与与配合！</strong>
     </p>
 
-    {{ next_button }}
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
 
 {{ endblock }}

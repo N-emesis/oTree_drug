@@ -6,9 +6,9 @@ SESSION_CONFIGS = [
     dict(
         name='game',
         display_name="Game",
-        num_demo_participants=1,  # 总人数
-        #app_sequence=['dictator_game','dictator_game_2','trust_game','trust_game_2'],
-        app_sequence=['survey_last'],
+        num_demo_participants=2,  # 总人数
+        app_sequence=['dictator_game','dictator_game_2','trust_game','trust_game_2','survey_last'],
+        #app_sequence=['survey_last'],
     ),
 ]
 
@@ -23,6 +23,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 PARTICIPANT_FIELDS = []
 SESSION_FIELDS = []
+#DEBUG = False
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans

@@ -1,7 +1,64 @@
-{{ block title }}实验一介绍{{ endblock }}
-{{ block content }}
-<p><strong></strong>注意：每个部分实验均为独立进行，前后并无关联。</strong></p>
-    {{ include_sibling 'instructions.html' }}
-    <p>点击下面的按钮继续：</p>
-    {{ next_button }}
-{{ endblock }}
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block title %}实验一{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- 页面标题 -->
+    <h1 class="text-center mt-4 mb-4">实验一</h1>
+
+    <!-- 注意信息 -->
+    <div class="alert alert-info" role="alert">
+        <strong>注意：</strong> 每个部分实验均为独立进行，前后并无关联。
+    </div>
+
+    <!-- 实验介绍内容 -->
+    <div class="instructions mt-4 mb-4">
+        {{ include_sibling 'instructions.html' }}
+    </div>
+
+    <!-- 行为提示 -->
+    <p class="lead text-center">点击下面的按钮继续：</p>
+
+    <!-- 下一步按钮 -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
+
+<!-- 自定义样式 -->
+<style>
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #007bff;
+    }
+    p {
+        font-size: 1.2rem;
+        color: #333;
+    }
+    .alert {
+        font-size: 1.1rem;
+    }
+    .btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+{% endblock %}

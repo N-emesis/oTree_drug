@@ -1,12 +1,43 @@
 {{ block title }}调查问卷{{ endblock }}
-{{ block content }}
 
-    <p>
-        感谢您对实验的配合，请完成调查问卷，帮助我们处理实验信息和统计奖励发放情况。
+{{ block content }}
+<div class="container mt-5">
+    <h2 class="text-primary text-center">感谢您的参与！</h2>
+    
+    <p class="lead text-center mb-4">
+        为了帮助我们处理实验信息和统计奖励发放情况，请您完成以下调查问卷。
     </p>
 
-    {{ formfields }}
+    <div class="card p-4 mb-4">
+        <h5 class="card-title">调查问卷</h5>
+        <div class="card-body">
+            {{ formfields }}
+        </div>
+    </div>
 
-    {{ next_button }}
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
 
+<style>
+    /* 美化选项样式 */
+    .form-group {
+        margin-bottom: 1.5rem; /* 增加选项之间的间距 */
+    }
+
+    .form-control {
+        border: 1px solid #007bff; /* 设置边框颜色 */
+        border-radius: 0.25rem; /* 圆角 */
+    }
+
+    .form-control:focus {
+        border-color: #0056b3; /* 聚焦时边框颜色 */
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* 聚焦时阴影效果 */
+    }
+
+    .form-check-label {
+        margin-left: 0.5rem; /* 标签与复选框间距 */
+    }
+</style>
 {{ endblock }}

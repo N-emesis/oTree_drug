@@ -1,15 +1,36 @@
 {{ block title }} 请做出本轮选择 {{ endblock }}
-{{ block content }}
-    <h3>
-        你本轮拥有 {{ C.ENDOWMENT }} 分。 
-        请决定你本轮想保留多少分给自己。
-        <strong>
-            <br>你的选择将会有观察者进行记录。
-        </strong>
-    </h3>
-    {{ formfields }}
-    <p>点击下面的按钮继续：</p>
-    {{ next_button }}
-    {{ include_sibling 'instructions.html' }}
 
+{{ block content }}
+<div class="container" style="max-width: 700px; margin: 0 auto; padding-top: 50px;">
+    <div class="card" style="padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <!-- 标题与说明 -->
+        <h2 class="text-center" style="color: #007bff; font-size: 1.8em;">请做出本轮选择</h2>
+
+        <p class="text-center" style="font-size: 1.2em; margin-top: 20px;">
+            <strong>你是参与者1。</strong> 
+            <br>你本轮拥有 <strong>{{ C.ENDOWMENT }}</strong> 分。
+            <br>请决定你本轮想分配给参与者2的分数。
+        </p>
+
+        <!-- 提示信息 -->
+        <p class="text-center" style="font-size: 1.1em; margin-top: 20px; color: #dc3545;">
+            <strong>注意：</strong> 你的选择将会有观察者进行记录。
+        </p>
+
+        <!-- 表单 -->
+        <div class="form-group" style="margin-top: 30px;">
+            {{ formfields }}
+        </div>
+
+        <!-- 继续按钮 -->
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        </div>
+
+        <!-- 额外说明 -->
+        <div style="margin-top: 30px;">
+            {{ include_sibling 'instructions.html' }}
+        </div>
+    </div>
+</div>
 {{ endblock }}

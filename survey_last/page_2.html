@@ -1,13 +1,22 @@
-{{ block title }}毒品渴求问卷{{ endblock }}
+{{ block title }}问卷调查{{ endblock }}
 {{ block content }}
 
-    <p>
-        说明：下面是一些你现在的感觉或想法，请按照你的实际感受，选择相应的数字。
+<div class="container mt-5">
+    <h2 class="text-center mb-4">毒品渴求问卷</h2>
+    
+    <p class="lead text-center mb-4">
+        说明：以下是一些关于你当前感受或想法的陈述。请根据你的实际感受选择相应的数字。
         <br><strong>“5”为非常符合，“1”为完全不符合</strong>
     </p>
 
-    {{ formfields }}
+    <div class="list-group mb-4">
+        {{ formfields }}
+    </div>
 
-    {{ next_button }}
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
 
 {{ endblock }}
+

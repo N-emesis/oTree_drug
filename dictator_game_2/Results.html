@@ -1,12 +1,22 @@
 {{ block title }}结果{{ endblock }}
 
 {{ block content }}
-    <p>
-        你决定向参与者2提供 <strong>{{ Offer }}分</strong> 。
-        你本轮获得 <strong>{{ player.kept }}分</strong> 。
-        
-        <p>点击下面的按钮继续：</p>
-        {{ next_button }}
-    </p>
-    {{ include_sibling 'instructions.html' }}
+<div class="container text-center" style="margin-top: 50px; font-family: Arial, sans-serif; color: #333;">
+    <h2 style="font-size: 2em; margin-bottom: 20px; color: #007bff;">实验结果</h2>
+    
+    <div style="border: 1px solid #007bff; border-radius: 10px; padding: 20px; background-color: #f8f9fa; display: inline-block;">
+        <p style="font-size: 1.5em;">
+            你决定向参与者2分配 <strong style="color: #28a745;">{{ player.Offer }} 分</strong>。
+        </p>
+        <p style="font-size: 1.5em;">
+            你本轮获得 <strong style="color: #28a745;">{{ kept }} 分</strong>。
+        </p>
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
+
+{{ include_sibling 'instructions.html' }}
 {{ endblock }}

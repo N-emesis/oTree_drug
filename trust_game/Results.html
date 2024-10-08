@@ -1,11 +1,17 @@
 {{ block title }}结果{{ endblock }}
 
 {{ block content }}
-    <p>
-        你决定向参与者2分配 <strong>{{ player.kept }}分</strong> 。
-        
-        <p>点击下面的按钮继续：</p>
-        {{ next_button }}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">实验结果</h3>
+    
+    <p class="lead">
+        你决定向参与者2分配 <strong>{{ player.kept }} 分</strong>。
     </p>
+    
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+    
     {{ include_sibling 'instructions.html' }}
+</div>
 {{ endblock }}
