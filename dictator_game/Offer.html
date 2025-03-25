@@ -19,16 +19,39 @@
         </p>
     </div>
     
+    
     <!-- 表单部分 -->
     <div class="form-group">
         {{ formfields }}
     </div>
     
-    <!-- 按钮部分 -->
+
+    <!-- 提交按钮，初始状态为禁用，并且显示倒计时 -->
     <div class="mt-4">
-        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后可点击)</button>
     </div>
     
+<!-- JavaScript 来处理倒计时和启用按钮 -->
+<script>
+    // 设置倒计时初始值
+    var waitTime = 5;  // 这里设置等待时间为 5 秒
+    var countdownElement = document.getElementById('countdown');
+    var nextButton = document.getElementById('next-button');
+
+    // 更新倒计时显示
+    var countdownInterval = setInterval(function() {
+        waitTime--;  // 每秒减少时间
+        countdownElement.textContent = waitTime;  // 更新按钮中的倒计时文本
+        
+        if (waitTime <= 0) {
+            // 倒计时结束时，启用按钮并停止倒计时
+            clearInterval(countdownInterval);
+            nextButton.disabled = false;
+            nextButton.textContent = "继续";  // 恢复按钮文本为 "继续"
+        }
+    }, 1000);  // 每秒更新一次
+</script>
+
     <!-- 实验说明文件包含 -->
     <div style="margin-top: 20px;">
         {{ include_sibling 'instructions.html' }}

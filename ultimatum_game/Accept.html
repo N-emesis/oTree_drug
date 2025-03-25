@@ -1,0 +1,33 @@
+{{ block title }}实验四{{ endblock }}
+
+{{ block content }}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">本轮实验你是回应者（参与者2）。</h3>
+    
+    <p class="lead">
+        提议者（参与者1）向你分配了 <strong>{{ random_value }} 分</strong>。
+        <br>你可以选择接受或拒绝这个分配。
+    </p>
+    
+    <p class="text-secondary">
+        <strong>如果你接受：</strong> 你将获得 {{ random_value }} 分，提议者将获得剩余的分数。
+        <br><strong>如果你拒绝：</strong> 双方都不会获得任何分数。
+    </p>
+
+    <p class="text-secondary">
+        <strong>注意：</strong>
+        关于回应者（参与者2）选择“接受”还是“拒绝”提议者（参与者1）的分配分数的信息将不会公布。
+    </p>
+    
+    <!-- 表单字段居中显示 -->
+    <div style="width: 50%; margin: 0 auto;">
+        {{ formfields }}
+    </div>
+
+    <!-- 提交按钮 -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">提交</button>
+    </div>
+
+</div>
+{{ endblock }}

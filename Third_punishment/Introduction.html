@@ -1,0 +1,18 @@
+{{ block content }}
+<div class="card bg-light m-3">
+    <div class="card-body text-center">
+        <h3 class="text-primary">实验五</h3>
+        
+        <p class="lead">
+            <strong>注意：</strong>你将作为第三方观察者，评估提议者对接收者的分配情况。
+            <br>本实验的每一部分均独立进行，前后没有关联。
+        </p>
+
+        {{ include_sibling 'instructions.html' }}  <!-- 你可以根据需要在 instructions.html 中添加更多详细说明 -->
+        
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        </div>
+    </div>
+</div>
+{{ endblock }}

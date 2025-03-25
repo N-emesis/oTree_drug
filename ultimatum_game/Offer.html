@@ -2,47 +2,46 @@
 
 {{ block content }}
 <div class="container text-center mt-5">
-    <h3 class="text-primary">本轮实验信息</h3>
+    <h3 class="text-primary">实验四</h3>
     
     <p class="lead">
-        你是<strong>参与者1</strong>，当前拥有 <strong>{{ C.ENDOWMENT }} 分</strong>。
-        <br>请决定你想向参与者2分配多少分。
+        本轮你是<strong>提议者（参与者1）</strong>，当前拥有 <strong>{{ C.ENDOWMENT }} 分</strong>。
+        <br>请决定你想向回应者（参与者2）分配多少分。
     </p>
     
     <p class="text-secondary">
         <strong>注意：</strong>
-        本轮实验为匿名实验，你的选择将是匿名的。
+        关于回应者（参与者2）选择“接受”还是“拒绝”提议者（参与者1）的分配分数的信息将不会公布。
     </p>
     
-    <!-- 你的表单字段居中 -->
+    <!-- 表单字段居中显示 -->
     <div style="width: 50%; margin: 0 auto;">
         {{ formfields }}
     </div>
 
-    <!-- 提交按钮，初始状态为禁用，并且显示倒计时 -->
+    <!-- 倒计时按钮 -->
     <div class="mt-4">
-        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后才可进入下一页)</button>
+        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后可继续)</button>
     </div>
-    
-    <!-- 引入其他页面的内容 -->
-    {{ include_sibling 'instructions.html' }}
 
+    <!-- 引入说明页面内容 -->
+    {{ include_sibling 'instructions.html' }}
 </div>
 
-<!-- JavaScript 来处理倒计时和启用按钮 -->
+<!-- JavaScript 实现倒计时和按钮启用 -->
 <script>
     // 设置倒计时初始值
-    var waitTime = 5;  // 这里设置等待时间为 5 秒
+    var waitTime = 5;  // 倒计时时长，单位：秒
     var countdownElement = document.getElementById('countdown');
     var nextButton = document.getElementById('next-button');
 
     // 更新倒计时显示
     var countdownInterval = setInterval(function() {
         waitTime--;  // 每秒减少时间
-        countdownElement.textContent = waitTime;  // 更新按钮中的倒计时文本
+        countdownElement.textContent = waitTime;  // 更新倒计时文本
         
         if (waitTime <= 0) {
-            // 倒计时结束时，启用按钮并停止倒计时
+            // 倒计时结束时启用按钮，并停止倒计时
             clearInterval(countdownInterval);
             nextButton.disabled = false;
             nextButton.textContent = "继续";  // 恢复按钮文本为 "继续"

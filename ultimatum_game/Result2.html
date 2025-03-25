@@ -1,0 +1,59 @@
+{{ block title }}本轮结果{{ endblock }}
+
+{{ block content }}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">实验结果</h3>
+    
+    <!-- 显示回应者是否接受了分配 -->
+    <p class="lead">
+        {% if accept_offer %}
+            你接受了提议者的分配。
+        {% else %}
+            你拒绝了提议者的分配。
+        {% endif %}
+    </p>
+
+    <!-- 如果接受了，显示双方的得分 -->
+    {% if accept_offer %}
+        <p>
+            提议者向你分配了 <strong>{{ offer_amount }} 分</strong>。
+            <br>最终分数：
+            <ul>
+                <li><strong>提议者：</strong> {{ proposer_final }} 分</li>
+                <li><strong>回应者（你）：</strong> {{ responder_final }} 分</li>
+            </ul>
+        </p>
+    {% else %}
+        <!-- 如果拒绝了，显示双方得分为 0 -->
+        <p>
+            你拒绝了提议者的分配，双方的最终分数均为 <strong>0 分</strong>。
+        </p>
+    {% endif %}
+    
+    <!-- 倒计时按钮 -->
+    <div class="mt-4">
+        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后可继续)</button>
+    </div>
+    <!-- JavaScript 实现倒计时和按钮启用 -->
+<script>
+    // 设置倒计时初始值
+    var waitTime = 5;  // 倒计时时长，单位：秒
+    var countdownElement = document.getElementById('countdown');
+    var nextButton = document.getElementById('next-button');
+
+    // 更新倒计时显示
+    var countdownInterval = setInterval(function() {
+        waitTime--;  // 每秒减少时间
+        countdownElement.textContent = waitTime;  // 更新倒计时文本
+        
+        if (waitTime <= 0) {
+            // 倒计时结束时启用按钮，并停止倒计时
+            clearInterval(countdownInterval);
+            nextButton.disabled = false;
+            nextButton.textContent = "继续";  // 恢复按钮文本为 "继续"
+        }
+    }, 1000);  // 每秒更新一次
+</script>
+</div>
+{{ endblock }}
+

@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    结果
+{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">本轮结果</h3>
+
+    <p class="lead">
+        <strong>您在本轮付出了：</strong> {{ player.Offer1 }} 分
+    </p>
+
+    <p class="lead">
+        <strong>接收者本轮得到了</strong> {{ a }} 分的帮助
+    </p>
+
+    <p>
+        <em>您的决定对接收者的帮助已经生效。</em>
+    </p>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+</div>
+{% endblock %}

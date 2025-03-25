@@ -18,8 +18,21 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    age = models.IntegerField(label='你的年龄是多少？', min=13, max=125)
-    name = models.StringField(label='请输入你的名字')
+    age = models.IntegerField(label='你的年龄是多少？（请输入数字）', min=13, max=125)
+    gender = models.StringField(
+        label='你得性别是',
+        choices=[
+            ('male', '男'),
+            ('female', '女'),]
+    )
+    name = models.StringField(label='请输入你的名字，以帮助我们后续进行奖励发放')
+    time = models.StringField(label='已经戒断时间(月)',doc='已经戒断时间(月)')
+    q1 = models.BooleanField(label='你在前面实验中做出的决定会影响后面实验的事情吗？',doc='问题1',choices=[[True,'是'],[False,'否']])
+    q2 = models.BooleanField(label='你和其他参与者所做的决定会影响你和其他参与者所获得的奖励吗？',doc='问题2',choices=[[True,'是'],[False,'否']])
+    work = models.StringField(label='你曾经的工作是？',doc='工作')
+    study = models.StringField(label='你的学历是？',doc='学历')
+    marriage = models.BooleanField(label='你是否已婚？',doc='婚姻状况',choices=[[True,'是'],[False,'否']])
+    child = models.BooleanField(label='你是否有子女？',doc='是否有子女',choices=[[True,'是'],[False,'否']])
     # drugs_used = models.LongStringField(
     #     label="是否曾吸食以下毒品？(可多选)",
     #     choices=[
@@ -38,10 +51,10 @@ class Player(BasePlayer):
     drugs_used_marijuana = models.BooleanField(label='使用过大麻',doc="使用过大麻",choices=[[True,'是'],[False,'否']])
     drugs_used_amphetamine = models.BooleanField(label='使用过麻黄素',doc="使用过麻黄素",choices=[[True,'是'],[False,'否']])
     drugs_used_methadone = models.BooleanField(label='使用过美沙酮',doc="使用过美沙酮",choices=[[True,'是'],[False,'否']])
+    other_drug = models.StringField(label='如果使用过其他毒品，请填写在下方，如果没有请填“无”',doc='其他毒品')
 
     last_use_year = models.IntegerField(label="上一次吸食年份")
-    usage_count = models.IntegerField(label="吸食次数")
-    usage_years = models.IntegerField(label="吸食年限")
+    usage_years = models.IntegerField(label="吸食年限（填写数字即可）")
 
 
     #毒品渴望量表
@@ -71,26 +84,26 @@ class Player(BasePlayer):
     craving_24 = models.IntegerField(label="现在我不再想用毒品。", choices=[1, 2, 3, 4, 5], widget=widgets.RadioSelectHorizontal)
     craving_25 = models.IntegerField(label="如果现在我有毒品，我可能不用。", choices=[1, 2, 3, 4, 5], widget=widgets.RadioSelectHorizontal)
     
-    crt_bat = models.IntegerField(
-        label='''
-        A bat and a ball cost 22 dollars in total.
-        The bat costs 20 dollars more than the ball.
-        How many dollars does the ball cost?'''
-    )
-    crt_widget = models.IntegerField(
-        label='''
-        If it takes 5 machines 5 minutes to make 5 widgets,
-        how many minutes would it take 100 machines to make 100 widgets?
-        '''
-    )
-    crt_lake = models.IntegerField(
-        label='''
-        In a lake, there is a patch of lily pads.
-        Every day, the patch doubles in size.
-        If it takes 48 days for the patch to cover the entire lake,
-        how many days would it take for the patch to cover half of the lake?
-        '''
-    )
+    # crt_bat = models.IntegerField(
+    #     label='''
+    #     A bat and a ball cost 22 dollars in total.
+    #     The bat costs 20 dollars more than the ball.
+    #     How many dollars does the ball cost?'''
+    # )
+    # crt_widget = models.IntegerField(
+    #     label='''
+    #     If it takes 5 machines 5 minutes to make 5 widgets,
+    #     how many minutes would it take 100 machines to make 100 widgets?
+    #     '''
+    # )
+    # crt_lake = models.IntegerField(
+    #     label='''
+    #     In a lake, there is a patch of lily pads.
+    #     Every day, the patch doubles in size.
+    #     If it takes 48 days for the patch to cover the entire lake,
+    #     how many days would it take for the patch to cover half of the lake?
+    #     '''
+    # )
 
 
 # FUNCTIONS
@@ -106,7 +119,8 @@ class page_2(Page):
 
 class page_1(Page):
     form_model = 'player'
-    form_fields = ['name', 'age', 'drugs_used_heroin','drugs_used_methamphetamine','drugs_used_mdma','drugs_used_marijuana','drugs_used_amphetamine','drugs_used_methadone','last_use_year','usage_count','usage_years']
+    form_fields = ['name', 'gender','age', 'drugs_used_heroin','drugs_used_methamphetamine','drugs_used_mdma','drugs_used_marijuana',
+                   'drugs_used_amphetamine','drugs_used_methadone','other_drug','last_use_year','usage_years','time','q1','q2','work','study','marriage','child']
 
 class page_3(Page):
     pass

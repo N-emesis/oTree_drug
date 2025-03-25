@@ -1,0 +1,38 @@
+{{ block content }}
+<div class="card bg-light m-3">
+    <div class="card-body text-center">
+        <h3 class="text-primary">提议者分配结果</h3>
+        
+        <p class="lead">
+            提议者向接收者分配了<strong>0分</strong>，自己保留<strong>100分</strong>。
+            <br>本轮你拥有<strong>50分</strong>你可以选择付出一定的分数来惩罚提议者，提议者会受到两倍于此分数的惩罚。
+        </p>
+        
+    {{ formfields }}
+
+    <!-- 倒计时按钮 -->
+    <div class="mt-4">
+        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后可继续)</button>
+    </div>
+    <!-- JavaScript 实现倒计时和按钮启用 -->
+<script>
+    // 设置倒计时初始值
+    var waitTime = 5;  // 倒计时时长，单位：秒
+    var countdownElement = document.getElementById('countdown');
+    var nextButton = document.getElementById('next-button');
+
+    // 更新倒计时显示
+    var countdownInterval = setInterval(function() {
+        waitTime--;  // 每秒减少时间
+        countdownElement.textContent = waitTime;  // 更新倒计时文本
+        
+        if (waitTime <= 0) {
+            // 倒计时结束时启用按钮，并停止倒计时
+            clearInterval(countdownInterval);
+            nextButton.disabled = false;
+            nextButton.textContent = "继续";  // 恢复按钮文本为 "继续"
+        }
+    }, 1000);  // 每秒更新一次
+</script>
+</div>
+{{ endblock }}

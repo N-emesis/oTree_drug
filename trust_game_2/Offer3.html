@@ -6,7 +6,7 @@
     
     <p class="lead">
         本轮实验你是<strong>参与者2</strong>。
-        <br>参与者1向你分配了 <strong>16 分</strong>，因此你得到了 <strong>27分</strong>（9 × 3 = 27）。
+        <br>参与者1向你分配了 <strong>10 分</strong>，因此你得到了 <strong>30分</strong>（10 × 3 = 30）。
     </p>
 
     <p class="text-secondary">
@@ -20,9 +20,34 @@
 
     {{ formfields }}
 
+
+    <!-- 提交按钮，初始状态为禁用，并且显示倒计时 -->
     <div class="mt-4">
-        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        <button id="next-button" type="submit" class="btn btn-success btn-lg" disabled>继续 ( <span id="countdown">5</span> 秒后才可进入下一页)</button>
     </div>
+    
+<!-- JavaScript 来处理倒计时和启用按钮 -->
+<script>
+    // 设置倒计时初始值
+    var waitTime = 5;  // 这里设置等待时间为 5 秒
+    var countdownElement = document.getElementById('countdown');
+    var nextButton = document.getElementById('next-button');
+
+    // 更新倒计时显示
+    var countdownInterval = setInterval(function() {
+        waitTime--;  // 每秒减少时间
+        countdownElement.textContent = waitTime;  // 更新按钮中的倒计时文本
+        
+        if (waitTime <= 0) {
+            // 倒计时结束时，启用按钮并停止倒计时
+            clearInterval(countdownInterval);
+            nextButton.disabled = false;
+            nextButton.textContent = "继续";  // 恢复按钮文本为 "继续"
+        }
+    }, 1000);  // 每秒更新一次
+</script>
+
+
     
     {{ include_sibling 'instructions.html' }}
 </div>

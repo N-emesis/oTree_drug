@@ -6,10 +6,17 @@ SESSION_CONFIGS = [
     dict(
         name='game',
         display_name="Game",
-        num_demo_participants=2,  # 总人数
-        app_sequence=['dictator_game','dictator_game_2','trust_game','trust_game_2','survey_last'],
+        num_demo_participants=20,  # 总人数
+        app_sequence=['dictator_game','dictator_game_2','trust_game','trust_game_2','ultimatum_game','Third_punishment','Third_help','survey_last'],
         #app_sequence=['survey_last'],
-    ),
+    )
+    # dict(
+    #     name='game',
+    #     display_name="Game",
+    #     num_demo_participants=1,  # 总人数
+    #     #app_sequence=['Third_help'],
+    #     app_sequence=['survey_last'],
+    # ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -23,7 +30,8 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 PARTICIPANT_FIELDS = []
 SESSION_FIELDS = []
-#DEBUG = False
+#显示或不显示DEBUG
+DEBUG = False
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans

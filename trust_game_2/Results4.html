@@ -1,0 +1,21 @@
+{{ block title }}结果{{ endblock }}
+
+{{ block content }}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">本轮实验结果</h3>
+    
+    <p class="lead">
+        你决定向参与者1回馈 <strong>{{ a }} 分</strong>。
+    </p>
+
+    <p class="text-secondary">
+        感谢你的参与！请继续到下一个步骤。
+    </p>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+    </div>
+    
+    {{ include_sibling 'instructions.html' }}
+</div>
+{{ endblock }}

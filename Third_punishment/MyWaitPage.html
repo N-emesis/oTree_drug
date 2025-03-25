@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+
+{% block title %}请稍候...{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h3 class="text-primary">正在等待提议者（参与者1）对本轮分数进行分配</h3>
+    
+    <!-- 可选择添加一个加载动画或其他视觉效果 -->
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<!-- 隐藏倒计时的显示 -->
+<style>
+    .otree-timer {
+        display: none;
+    }
+</style>
+<!-- JavaScript 来处理隐藏的倒计时 -->
+<script>
+    // 隐藏实际倒计时，用户不会知道具体剩余时间
+    var totalWaitTime = 10;  // 这里设置等待时间为 10 秒
+    
+    // 模拟一个视觉上的等待效果，比如转圈动画等
+    var interval = setInterval(function() {
+        totalWaitTime--;
+        if (totalWaitTime <= 0) {
+            clearInterval(interval);
+        }
+    }, 1000);  // 每秒更新一次
+</script>
+{% endblock %}

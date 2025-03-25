@@ -1,0 +1,212 @@
+No command named 'deserver'
+No command named 'deserver'
+No command named 'deserver'
+Open your browser to http://<ip_address>:8000/
+To quit the server, press Control+C.
+
+Open your browser to http://<ip_address>:8000/
+To quit the server, press Control+C.
+
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018dc400; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa901994b20; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901994b20; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9017ca380; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017ca380; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa90187d480; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90187d480; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9018dc640; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90185cca0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa903b886a0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa903b886a0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa901920220; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901920220; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa90187eb00; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90187eb00; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa901997ac0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90185fa60; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa90469f220; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90469f220; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa903d6f940; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901a1a380; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9019234c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9019234c0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa903b89180; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa903b89180; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9018b0340; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018b0340; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa901920ca0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901920ca0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9017cbac0; payoff>; the old property will be discarded
+  util.warn(
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 82, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("no request line received")
+h11._util.RemoteProtocolError: no request line received
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 79, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018dc640; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa904b053c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa904b053c0; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9019213c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9019213c0; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9016fd840; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9016fd840; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa903b41f00; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa903b41f00; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa901612200; payoff>; the old property will be discarded
+  util.warn(
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 79, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901997ac0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9018b25c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018b25c0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa90187ca00; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90187ca00; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9017b3700; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b3700; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9016ff100; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9016ff100; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9017b3ac0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa903d6f940; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa901a193c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901a193c0; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa901a1a500; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901a1a500; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa9017b3520; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017cbac0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9017b1ea0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b1ea0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9018b3e80; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018b3e80; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90186c940; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90186c940; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90186f280; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90186f280; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90179d5a0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90179d5a0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9018dc460; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901612200; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa901996d40; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa901996d40; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa90185c160; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90185c160; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9017c80a0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017c80a0; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa9017b3ee0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b3ee0; payoff> on mapped class Player->dictator_game_player being replaced with new property <SynonymProperty at 0x7fa901922620; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b3ac0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9017b1000; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b1000; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa90163a620; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90163a620; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa9018b1cc0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018b1cc0; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa903b89c60; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa903b89c60; payoff> on mapped class Player->dictator_game_2_player being replaced with new property <SynonymProperty at 0x7fa90179d060; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017b3520; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa90185fdc0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90185fdc0; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa9019962c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9019962c0; payoff> on mapped class Player->trust_game_player being replaced with new property <SynonymProperty at 0x7fa90185e320; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018dc460; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9019aa5c0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9019aa5c0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9017cafe0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9017cafe0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa9018b2ce0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa9018b2ce0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90185cee0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90185cee0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90179c9a0; payoff>; the old property will be discarded
+  util.warn(
+/root/venv_otree/lib/python3.10/site-packages/sqlalchemy/orm/mapper.py:1841: SAWarning: Property <SynonymProperty at 0x7fa90179c9a0; payoff> on mapped class Player->ultimatum_game_player being replaced with new property <SynonymProperty at 0x7fa90186c0a0; payoff>; the old property will be discarded
+  util.warn(
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 83, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 91, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'SM')
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 83, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 91, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'SM')
+Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/venv_otree/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 172, in handle_events
+    event = self.conn.next_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 487, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 469, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_connection.py", line 411, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/venv_otree/lib/python3.10/site-packages/h11/_readers.py", line 79, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+Open your browser to http://<ip_address>:8000/
+To quit the server, press Control+C.
+

@@ -1,0 +1,19 @@
+
+{{ block content }}
+<div class="card bg-light m-3">
+    <div class="card-body text-center">
+        <h3 class="text-primary">实验四</h3>
+        
+        <p class="lead">
+            <strong>注意：</strong>每个部分实验均为独立进行，前后并无关联。
+            <br>关于回应者（参与者2）选择“接受”还是“拒绝”提议者（参与者1）的分配分数的信息将不会公布。
+        </p>
+        
+        {{ include_sibling 'instructions.html' }}
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success btn-lg">继续</button> <!-- 替换 {{ next_button }} -->
+        </div>
+    </div>
+</div>
+{{ endblock }}

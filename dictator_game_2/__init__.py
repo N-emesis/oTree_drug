@@ -4,7 +4,7 @@ from otree.api import *
 class C(BaseConstants):
     NAME_IN_URL = 'dictator_game_2'
     PLAYERS_PER_GROUP = None  # 每组1名玩家
-    NUM_ROUNDS = 2         # 实验轮数，可以更改为多轮
+    NUM_ROUNDS = 5         # 实验轮数，可以更改为多轮
     ENDOWMENT = cu(50)      # 独裁者每轮的初始分数
 
 class Subsession(BaseSubsession):
@@ -25,11 +25,17 @@ class Player(BasePlayer):
         label="请输入您的号码",
         doc="玩家输入的号码"
     )
+    # Offer = models.CurrencyField(
+    #      min=0, 
+    #      max=C.ENDOWMENT,
+    #      label="请输入你本轮想给参与者2分配的分数",
+    #      doc="独裁者分配给参与者2的分数"
+    
+    # )
     Offer = models.CurrencyField(
-         min=0, 
-         max=C.ENDOWMENT,
-         label="请输入你本轮想给参与者2分配的分数",
-         doc="独裁者分配给参与者2的分数"
+        choices = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+        label="请选择你本轮想给参与者2分配的分数",
+        doc="独裁者分配给参与者2的分数"
     )
     def role(self):
         return 'dictator'
@@ -66,6 +72,7 @@ class TimedWaitPage(Page):
     
 
 class ResultsWaitPage(WaitPage):
+    body_text = "请稍等，其他参与者正在进行决策。"
     after_all_players_arrive = set_payoffs
 
 class Results(Page):

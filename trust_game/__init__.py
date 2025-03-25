@@ -15,7 +15,7 @@ tripled. The trust game was first proposed by
 class C(BaseConstants):
     NAME_IN_URL = 'trust_game'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 2
+    NUM_ROUNDS = 3
     # Initial amount allocated to each player
     ENDOWMENT = cu(50)
     MULTIPLIER = 3
@@ -31,9 +31,8 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     kept = models.CurrencyField(
-         min=0, 
-         max=C.ENDOWMENT,
-         label="请输入你本轮想要分配给参与者2的分数",
+         choices = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+         label="你向参与者2分配的分数会翻三倍给予参与者2，请选择你本轮想要分配给参与者2的分数",
          doc="投资者选择投资的分数"
     )
     def role(self):
@@ -57,12 +56,17 @@ class Introduction(Page):
 class Offer(Page):
     form_model = 'player'
     form_fields = ['kept']
+    def vars_for_template(self):
+        # 在模板中传递等待时间
+        return dict(wait_time=5)
+
     
     # @staticmethod
     # def is_displayed(player:Player):
     #     return player.id_in_group == 1  # 只有独裁者才能看到分配页面
 
 class ResultsWaitPage(WaitPage):
+    body_text = "请稍等，其他参与者正在进行决策。"
     after_all_players_arrive = set_payoffs
 
 class Results(Page):
